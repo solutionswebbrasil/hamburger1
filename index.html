@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgers - Início</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="#" class="active">Inicio</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="promocoes.html">Promoções</a>
+                <a href="encomendas.html">Encomendas</a>
+                <a href="sobre.html">Sobre</a>
+            </div>
+            <div class="auth-links">
+                <a href="#" id="loginBtn">LOGAR</a>
+                <span>|</span>
+                <a href="#" id="registerBtn">CADASTRAR</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel-container">
+            <button class="carousel-button prev" id="prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="carousel-items">
+                <div class="category-card">
+                    <img src="../assets/pizzas/pizzas (2).webp" alt="Pizza">
+                    <div class="category-title">PIZZAS</div>
+                </div>
+                <div class="category-card">
+                    <img src="../assets/pasteis/pasteis.webp" alt="Pastel">
+                    <div class="category-title">PASTEIS</div>
+                </div>
+                <div class="category-card">
+                    <img src="../assets/lanches/lanches.webp" alt="Lanche">
+                    <div class="category-title">LANCHES</div>
+                </div>
+                <div class="category-card">
+                    <img src="../assets/pratos/comida.webp" alt="Comida">
+                    <div class="category-title">COMIDAS</div>
+                </div>
+                <div class="category-card">
+                    <img src="../assets/coxinhas/coxinhas.webp" alt="Salgados">
+                    <div class="category-title">SALGADOS</div>
+                </div>
+            </div>
+
+            <button class="carousel-button next" id="next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section menu-section">
+                <h3>Menu</h3>
+                <nav class="footer-nav">
+                    <a href="#">Inicio</a>
+                    <a href="cardapio.html">Cardápio</a>
+                    <a href="promocoes.html">Promoções</a>
+                    <a href="encomendas.html">Encomendas</a>
+                    <a href="sobre.html">Sobre</a>
+                </nav>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-section address-section">
+                <h3>Endereço</h3>
+                <p>Rua 2, n45 Bairro São José</p>
+                <p>Jundiaí - SP</p>
+                <p>CEP 0000-000</p>
+                <p>(11) 0 0000-0000</p>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-section payment-section">
+                <h3>Formas de Pagamento</h3>
+                <div class="payment-grid">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fab fa-pix" title="PIX"></i>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-section map-section">
+                <h3>Localização</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234718.49960030365!2d-47.07151553650964!3d-23.189297124279665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf24293cc00531%3A0xf686a1c1163c6bbb!2zSnVuZGlhw60gLSBBZ2xvbWVyYcOnw6NvIFVyYmFuYSBkZSBKdW5kaWHDrSwgSnVuZGlhw60gLSBTUA!5e0!3m2!1spt-BR!2sbr!4v1730614511492!5m2!1spt-BR!2sbr">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modais de Login e Cadastro -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Login</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Usuário</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Senha</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="submit-button">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content register">
+            <span class="close-button">&times;</span>
+            <h2>CADASTRO</h2>
+            <form class="register-form">
+                <div class="form-group">
+                    <input type="text" id="fullName" required>
+                    <label for="fullName">NOME COMPLETO</label>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="cep" required>
+                        <label for="cep">CEP</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="address" required>
+                        <label for="address">ENDEREÇO</label>
+                    </div>
+                </div>
+                <div class="form-row three-col">
+                    <div class="form-group">
+                        <input type="text" id="neighborhood" required>
+                        <label for="neighborhood">BAIRRO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="city" required>
+                        <label for="city">CIDADE</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="number" required>
+                        <label for="number">NÚMERO</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="addressRef" required>
+                    <label for="addressRef">REFERÊNCIA DO ENDEREÇO</label>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" id="phone" required>
+                        <label for="phone">TELEFONE DE CONTATO</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">E-MAIL</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="password" id="registerPassword" required>
+                        <label for="registerPassword">DIGITE UMA SENHA</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" required>
+                        <label for="confirmPassword">REPITA A SENHA</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">FINALIZAR</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
